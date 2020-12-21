@@ -1,0 +1,24 @@
+doctype html
+html(lang="sv")
+    head
+ 
+        link(rel='stylesheet', type='text/css', href='/form.css')
+    body
+        fieldset#field(class="form")
+            form(action="/add")
+                h1 Add task
+                table
+                    tr
+                        td To Do:
+                        td
+                            input(name='todo' type='text')
+                    tr
+                        td Choose a category:
+                        td
+                            select#category(name="category")
+                                option(value="work") Work
+                                option(value="home") Home
+                                option(value="purchase") Purchase
+                    tr
+                        td 
+                            input(type="submit" value="Add!")

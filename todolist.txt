@@ -1,0 +1,11 @@
+1#home#delete#Städa
+2#purchasestarted#Bananer#undefined
+3#workstarted#städa bilen#undefined
+4#home#waiting#Städa
+5#work#delete#städa bilen
+6#purchase#started#Bananer
+7#home#waiting#Griljera julskinkan
+8#home#waiting#Laga mat
+9#home#waiting#Slå in julklappar
+10#work#waiting#Bananer
+11#work#waiting#Dricka kaffe
