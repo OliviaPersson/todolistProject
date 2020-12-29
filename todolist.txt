@@ -1,11 +1,10 @@
-1#home#delete#Städa
-2#purchasestarted#Bananer#undefined
-3#workstarted#städa bilen#undefined
-4#home#waiting#Städa
-5#work#delete#städa bilen
-6#purchase#started#Bananer
-7#home#waiting#Griljera julskinkan
-8#home#waiting#Laga mat
-9#home#waiting#Slå in julklappar
-10#work#waiting#Bananer
-11#work#waiting#Dricka kaffe
+1#purchase#waiting#Köpa julklappar
+3#home#waiting#städa bilen
+4#purchase#waiting#Bananer
+5#work#waiting#Städa
+7#purchase#waiting#Kaffe på rea
+8#home#waiting#Hänga tvätt
+9#work#started#Griljera julskinkan
+10#home#waiting#städa bilen
+9#purchase#started#köra bil
+10#work#waiting#Dricka kaffe

@@ -2,24 +2,37 @@
 table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
 }
 
 table, th, td {
-    border: 1px solid #ddd;
     text-align: left;
+    vertical-align: baseline;
 }
 
 th, td {
     padding: 15px;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+    margin-bottom: 10px;
 }
 
 th {
-    background-color: #5F9EA0;
+    background-color: #272727;
+    color: #ff652f;
+}
+
+/*Dropdown meny in status buttons*/
+/* https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
+.dropbtn {
+    background-color: #a538ff;
     color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 3px 10px;
+    font-size: 14px;
+}
+
+.dropbtn:hover {
+    background-color: #8725d9;
 }
 
 .dropdown {
@@ -69,18 +82,20 @@ th {
 }
 
 .header {
-    background-color: #f1f1f1;
+    color: #ff652f;
     padding: 20px;
     text-align: center;
 }
 
 body {
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #272727;
 }
 
 .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #ff652f;
 }
 
 .topnav a {
@@ -95,4 +110,75 @@ body {
 .topnav a:hover {
     background-color: #ddd;
     color: black;
+}
+
+/*Create new task button*/
+.button {
+    background-color: #14a76c;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #0e8a58;
+}
+
+.button:active {
+    background-color: black;
+}
+
+.button:visited {
+    background-color: ;
+}
+
+/*Delete buttons*/
+.delete-button {
+    background-color: #ff652f;
+    color: white;
+    text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 5px;
+    float: right;
+    font-size: 14px;
+}
+
+.delete-button:hover {
+    background-color: orangered;
+}
+
+/*Category paragraph*/
+.category {
+    text-align: center;
+    color: #ff652f;
+    font-size: 24px;
+}
+
+.todocard {
+    background-color: #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+    display: block;
+    border-radius: 5px;
+}
+
+/*
+Source: https://css-tricks.com/almanac/properties/b/box-shadow/
+*/
+.shadow {
+    -moz-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+}
+
+.listtable {
+    margin-top: 40px;
+}
+
+.listtable, th, td {
+    border-right: 1px solid #ff652f;
 }

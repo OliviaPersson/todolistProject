@@ -1,65 +1,67 @@
 html
     head
+        <!-- https://stackoverflow.com/questions/62657135/how-to-add-css-file-link-in-pug -->
         link(rel='stylesheet', type='text/css', href='/list.css')
     body
-        h1.header TO - DO LIST
-        div.topnav
-            a(href='/?category=work') Work
-            a(href='/?category=home') Home
-            a(href='/?category=purchase') Purchase
+        div
+            h1.header TO - DO LIST
+            div.topnav <!-- https://www.w3schools.com/howto/howto_js_topnav.asp -->
+                a(href='/?category=work') Work
+                a(href='/?category=home') Home
+                a(href='/?category=purchase') Purchase
 
-        p= category
-        a(href='/form') Create new task!
+            p.category= category
+            a.button.shadow(href='/form') Create new task
 
-        table
+        table.listtable
             tr
                 th Waiting
                 th Started
                 th Done
             tr
                 td
-                    table      <!--https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp dropdownmeny-->
+                    table      
                         each todo in waiting
                             tr
-                                td
+                                td.todocard.shadow
                                     p= todo.todo
-                                    div.dropdown
+                                    div.dropdown <!-- https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp dropdownmeny -->
                                         button.dropbtn Status
                                             i.fa.fa-caret-down
                                         div.dropdown-content
                                             a(href='/changestatus?id=' + todo.id + '&status=waiting') Waiting
                                             a(href='/changestatus?id=' + todo.id + '&status=started') Started
                                             a(href='/changestatus?id=' + todo.id + '&status=done') Done
-                                        a(href='/changestatus?id=' + todo.id + '&status=delete') Delete
+                                    a.delete-button(href='/changestatus?id=' + todo.id + '&status=delete') Delete
 
                 td
                     table    
                         each todo in started
                             tr
-                                td
+                                td.todocard.shadow
                                     p= todo.todo
-                                    div.dropdown
+                                    div.dropdown <!-- https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp dropdownmeny -->
                                         button.dropbtn Status
                                             i.fa.fa-caret-down
                                         div.dropdown-content
                                             a(href='/changestatus?id=' + todo.id + '&status=waiting') Waiting
                                             a(href='/changestatus?id=' + todo.id + '&status=started') Started
                                             a(href='/changestatus?id=' + todo.id + '&status=done') Done
-                                        a(href='/changestatus?id=' + todo.id + '&status=delete') Delete
+                                    a.delete-button(href='/changestatus?id=' + todo.id + '&status=delete') Delete
                 td
                     table    
                         each todo in done
                             tr
-                                td
+                                td.todocard.shadow
                                     p= todo.todo
-                                    div.dropdown
+                                    div.dropdown <!-- https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp dropdownmeny -->
                                         button.dropbtn Status
                                             i.fa.fa-caret-down
                                         div.dropdown-content
                                             a(href='/changestatus?id=' + todo.id + '&status=waiting') Waiting
                                             a(href='/changestatus?id=' + todo.id + '&status=started') Started
                                             a(href='/changestatus?id=' + todo.id + '&status=done') Done
-                                        a(href='/changestatus?id=' + todo.id + '&status=delete') Delete
+                                    a.delete-button(href='/changestatus?id=' + todo.id + '&status=delete') Delete
 
 
                                 

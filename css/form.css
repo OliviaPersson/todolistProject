@@ -5,4 +5,64 @@
 h1 {
     text-align: center;
     text-transform: uppercase;
+    color: #ff652f;
 }
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #272727;
+}
+
+td {
+    color: #ff652f;
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.todo-input {
+    padding-bottom: 20px;
+}
+
+.todo-input input {
+    height: 25px;
+    width: 230px;
+    border-radius: 5px;
+}
+
+.todo-input select {
+    height: 30px;
+    width: 240px;
+    border-radius: 5px;
+}
+
+.add-button {
+    background-color: #14a76c;
+    color: white;
+    padding: 8px 103px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.add-button:hover {
+    background-color: #0e8a58;
+}
+
+.add-button:active {
+    background-color: black;
+}
+
+.add-button:visited {
+    background-color:;
+}
+
+
