@@ -1,4 +1,4 @@
-// References for express and pug
+//References for express and pug
 //Source: https://scriptverse.academy/tutorials/nodejs-express-pug.html
 //Source: https://freshman.tech/learn-node/
 
@@ -75,7 +75,6 @@ app.get('/changestatus', (req, res) => {
     for (var i = 0; i < lines.length - 1; i++) {
         var values = lines[i].split('#');
         if (values[0] == id) {
-            console.log(status);
             if (status != 'delete') {
                 newData = newData + id + "#" + values[1] + "#" + status + "#" + values[3] + "\n";
             }
@@ -105,5 +104,4 @@ app.get('/add', (req, res) => {
     }
     res.redirect('/')
 })
-
 app.listen(8080)
