@@ -81,7 +81,7 @@ app.get('/changestatus', (req, res) => {
             }
         }
         else {
-            newData = newData + values[0] + '#' + values[1] + "#" + values[2] + '#' + values[3] + "\n";
+            newData = newData + values[0] + "#" + values[1] + "#" + values[2] + "#" + values[3] + "\n";
         }
     }
     //Source: https://www.geeksforgeeks.org/node-js-fs-unlinksync-method/
@@ -96,9 +96,12 @@ app.get('/add', (req, res) => {
     category = q.category;
     var todo = q.todo.toString("utf8");
     var file = fs.readFileSync('todolist.txt');
-    var lineCount = file.toString("utf8").split(/\r?\n/).length;
+    var lines = file.toString("utf8").split(/\r?\n/);
+    var lastLine = lines[lines.length - 2].split('#');
+    var newId = lastLine[0]*1+1;
+
     if (todo != "") {
-        fs.appendFileSync('todolist.txt', lineCount + "#" + category + "#waiting#" + todo + "\n");
+        fs.appendFileSync('todolist.txt', newId + "#" + category + "#waiting#" + todo + "\n");
     }
     res.redirect('/')
 })
